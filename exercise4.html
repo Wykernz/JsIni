@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JS Workbook</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Activities</h2>
+        <button onclick="activity1()">Activity 1: Welcome</button>
+        <button onclick="activity2()">Activity 2: Name/Age</button>
+        <button onclick="activity3()">Activity 3: Math</button>
+        <button onclick="activity4()">Activity 4: Fave Num</button>
+        <button onclick="activity5()">Activity 5: Eligibility</button>
+        <hr>
+        <h3>Week 3 Controls</h3>
+        <button id="changeBgBtn">Change BG Color</button>
+        <button onclick="week3Activity2()">Toggle Dark Mode</button>
+        <button onclick="week3Activity3()">Add List Item</button>
+        <hr>
+        <h3>Week 4 Grade Calc</h3>
+        <button onclick="showWeek4Content('gradePanel')">Open Calculator</button>
+    </div>
+
+    <div class="main-content">
+        <div id="gradePanel" class="week4-panel exercise-content">
+            <h2>Advanced Grade Calculator</h2>
+            <div class="input-group">
+                <label>How many quizzes?</label>
+                <input type="number" id="quizCount" value="1" min="1" max="10">
+                <button id="setQuizBtn">Set Quizzes</button>
+            </div>
+
+            <div id="quizArea"></div>
+
+            <div class="exam-section">
+                <h4>Exams (30%)</h4>
+                <input type="number" id="midExamScore" placeholder="Midterm Score">
+                <input type="number" id="midExamTotal" placeholder="Midterm Total">
+                <br>
+                <input type="number" id="finExamScore" placeholder="Final Score">
+                <input type="number" id="finExamTotal" placeholder="Final Total">
+            </div>
+
+            <div class="mco-section">
+                <h4>MCOs (50%)</h4>
+                <input type="number" id="midMcoScore" placeholder="Mid MCO Score">
+                <input type="number" id="midMcoTotal" placeholder="Mid MCO Total">
+                <br>
+                <input type="number" id="finMcoScore" placeholder="Fin MCO Score">
+                <input type="number" id="finMcoTotal" placeholder="Fin MCO Total">
+            </div>
+
+            <div class="calc-btns">
+                <button id="calcGradeBtn">Calculate</button>
+                <button id="resetGradeBtn" class="secondary">Reset</button>
+            </div>
+
+            <div id="results">
+                <p id="quizAvgDisplay">Quiz Average: —</p>
+                <p id="examAvgDisplay">Exam Average: —</p>
+                <p id="mcoAvgDisplay">MCO Average: —</p>
+                <p id="finalGradeDisplay">Final Grade: —</p>
+                <p id="gradeEquivDisplay">Grade Equivalent: —</p>
+            </div>
+        </div>
+
+        <div class="output-box">
+            <ul id="itemList"><li>Item 1</li></ul>
+            <p id="removeMe">This paragraph can be removed by Activity 4.</p>
+        </div>
+    </div>
+
+    <script src="Calculator.js"></script>
+</body>
+</html>
